@@ -16,4 +16,11 @@ def mark_complete(task_index, task_list):
         task_list[task_index - 1]["completed"] = True
         print("Task marked as complete!")
     else:
-        print("Invalid task index.")            
+        print("Invalid task index.") 
+
+def delete_task(task_index, task_list):
+    if 0 < task_index <= len(task_list):
+        del task_list[task_index - 1]
+        print("Task deleted successfully!")
+    else:
+        print("Invalid task index.")                  
